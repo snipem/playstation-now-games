@@ -13,8 +13,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: sudo apt-get install pup
+    - name: Install asciidoctor
+      run: sudo apt-get install asciidoctor
+
+    - name: Install pup
+      uses: actions/setup-go@v2
+      run: go get github.com/ericchiang/pup
 
     - name: Fetch PSNow Games and Convert
       run: make html
