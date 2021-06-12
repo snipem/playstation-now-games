@@ -2,9 +2,9 @@ name: Build PlayStation Now List
 
 on:
   push:
-    branches: [ source ]
   pull_request:
-    branches: [ source ]
+  schedule:
+      - cron: '30 9,19 * * *'
 
 jobs:
   build:
