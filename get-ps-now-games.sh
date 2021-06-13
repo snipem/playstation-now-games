@@ -1,6 +1,6 @@
 #!/bin/bash
 # run: ./get-ps-now-games.sh
-set -x
+set -e
 
 # Add current folder to path for pup
 PATH=$PATH:.
